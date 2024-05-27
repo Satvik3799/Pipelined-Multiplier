@@ -1,0 +1,4 @@
+Warning: There are 18 input ports missing set_input_delay.
+Warning: There are 32 unclocked register/latch pins.
+Warning: There are 48 unconstrained endpoints.
+[WARNING] Did not save OpenROAD database!

@@ -1,0 +1,19 @@
+Design Name: pipelined_multiplier
+Run Directory: /openlane/designs/pipelined_multiplier/runs/RUN_2024.05.27_20.56.28
+----------------------------------------
+
+Magic DRC Summary:
+Source: /openlane/designs/pipelined_multiplier/runs/RUN_2024.05.27_20.56.28/reports/signoff/drc.rpt
+Total Magic DRC violations is 0
+----------------------------------------
+
+LVS Summary:
+Source: /openlane/designs/pipelined_multiplier/runs/RUN_2024.05.27_20.56.28/logs/signoff/41-pipelined_multiplier.lef.lvs.log
+Number of nets: 459                        |Number of nets: 459                        
+Design is LVS clean.
+----------------------------------------
+
+Antenna Summary:
+Source: /openlane/designs/pipelined_multiplier/runs/RUN_2024.05.27_20.56.28/logs/signoff/44-arc.log
+Pin violations: 0
+Net violations: 0

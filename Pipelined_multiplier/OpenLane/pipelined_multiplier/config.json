@@ -1,0 +1,9 @@
+{
+    "DESIGN_NAME": "pipelined_multiplier",
+    "VERILOG_FILES": "dir::src/*.v",
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 5.0,
+    "FP_PDN_MULTILAYER": true,
+    "BASE_SDC_FILE": "dir::src/*.sdc",
+    "RUN_LINTER": 0
+}

@@ -1,4 +1,88 @@
-|multiplier
+|BIST
+clk => clk.IN4
+rst => rst.IN4
+lfsr_out[0] <= lfsr_a[0].DB_MAX_OUTPUT_PORT_TYPE
+lfsr_out[1] <= lfsr_a[1].DB_MAX_OUTPUT_PORT_TYPE
+lfsr_out[2] <= lfsr_a[2].DB_MAX_OUTPUT_PORT_TYPE
+lfsr_out[3] <= lfsr_a[3].DB_MAX_OUTPUT_PORT_TYPE
+lfsr_out[4] <= lfsr_a[4].DB_MAX_OUTPUT_PORT_TYPE
+lfsr_out[5] <= lfsr_a[5].DB_MAX_OUTPUT_PORT_TYPE
+lfsr_out[6] <= lfsr_a[6].DB_MAX_OUTPUT_PORT_TYPE
+lfsr_out[7] <= lfsr_a[7].DB_MAX_OUTPUT_PORT_TYPE
+result[0] <= multiplier_out[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= multiplier_out[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= multiplier_out[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= multiplier_out[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= multiplier_out[4].DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= multiplier_out[5].DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= multiplier_out[6].DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= multiplier_out[7].DB_MAX_OUTPUT_PORT_TYPE
+result[8] <= multiplier:multiplier_inst.out
+result[9] <= multiplier:multiplier_inst.out
+result[10] <= multiplier:multiplier_inst.out
+result[11] <= multiplier:multiplier_inst.out
+result[12] <= multiplier:multiplier_inst.out
+result[13] <= multiplier:multiplier_inst.out
+result[14] <= multiplier:multiplier_inst.out
+result[15] <= multiplier:multiplier_inst.out
+bist_pass <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BIST|LFSR:lfsr_a_inst
+clk => lfsr[0]~reg0.CLK
+clk => lfsr[1]~reg0.CLK
+clk => lfsr[2]~reg0.CLK
+clk => lfsr[3]~reg0.CLK
+clk => lfsr[4]~reg0.CLK
+clk => lfsr[5]~reg0.CLK
+clk => lfsr[6]~reg0.CLK
+clk => lfsr[7]~reg0.CLK
+rst => lfsr[0]~reg0.PRESET
+rst => lfsr[1]~reg0.ACLR
+rst => lfsr[2]~reg0.ACLR
+rst => lfsr[3]~reg0.ACLR
+rst => lfsr[4]~reg0.ACLR
+rst => lfsr[5]~reg0.ACLR
+rst => lfsr[6]~reg0.ACLR
+rst => lfsr[7]~reg0.ACLR
+lfsr[0] <= lfsr[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+lfsr[1] <= lfsr[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+lfsr[2] <= lfsr[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+lfsr[3] <= lfsr[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+lfsr[4] <= lfsr[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+lfsr[5] <= lfsr[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+lfsr[6] <= lfsr[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+lfsr[7] <= lfsr[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BIST|LFSR:lfsr_b_inst
+clk => lfsr[0]~reg0.CLK
+clk => lfsr[1]~reg0.CLK
+clk => lfsr[2]~reg0.CLK
+clk => lfsr[3]~reg0.CLK
+clk => lfsr[4]~reg0.CLK
+clk => lfsr[5]~reg0.CLK
+clk => lfsr[6]~reg0.CLK
+clk => lfsr[7]~reg0.CLK
+rst => lfsr[0]~reg0.PRESET
+rst => lfsr[1]~reg0.ACLR
+rst => lfsr[2]~reg0.ACLR
+rst => lfsr[3]~reg0.ACLR
+rst => lfsr[4]~reg0.ACLR
+rst => lfsr[5]~reg0.ACLR
+rst => lfsr[6]~reg0.ACLR
+rst => lfsr[7]~reg0.ACLR
+lfsr[0] <= lfsr[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+lfsr[1] <= lfsr[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+lfsr[2] <= lfsr[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+lfsr[3] <= lfsr[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+lfsr[4] <= lfsr[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+lfsr[5] <= lfsr[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+lfsr[6] <= lfsr[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+lfsr[7] <= lfsr[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BIST|multiplier:multiplier_inst
 clk => temp_b[0].CLK
 clk => temp_b[1].CLK
 clk => temp_b[2].CLK
@@ -79,21 +163,59 @@ b[4] => temp_b[4].DATAIN
 b[5] => temp_b[5].DATAIN
 b[6] => temp_b[6].DATAIN
 b[7] => temp_b[7].DATAIN
-out[0] << out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out[1] << out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out[2] << out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out[3] << out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out[4] << out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out[5] << out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out[6] << out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out[7] << out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out[8] << out[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out[9] << out[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out[10] << out[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out[11] << out[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out[12] << out[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out[13] << out[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out[14] << out[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out[15] << out[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= out[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= out[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= out[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= out[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= out[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= out[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= out[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= out[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BIST|misr_8bit:misr_inst
+clk => misr[0]~reg0.CLK
+clk => misr[1]~reg0.CLK
+clk => misr[2]~reg0.CLK
+clk => misr[3]~reg0.CLK
+clk => misr[4]~reg0.CLK
+clk => misr[5]~reg0.CLK
+clk => misr[6]~reg0.CLK
+clk => misr[7]~reg0.CLK
+rst => misr[0]~reg0.ACLR
+rst => misr[1]~reg0.ACLR
+rst => misr[2]~reg0.ACLR
+rst => misr[3]~reg0.ACLR
+rst => misr[4]~reg0.ACLR
+rst => misr[5]~reg0.ACLR
+rst => misr[6]~reg0.ACLR
+rst => misr[7]~reg0.ACLR
+data[0] => misr.IN1
+data[1] => misr.IN1
+data[2] => misr.IN1
+data[3] => feedback.IN1
+data[3] => misr.IN1
+data[4] => feedback.IN1
+data[4] => misr.IN1
+data[5] => feedback.IN1
+data[5] => misr.IN1
+data[6] => misr.IN1
+data[7] => feedback.IN1
+misr[0] <= misr[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+misr[1] <= misr[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+misr[2] <= misr[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+misr[3] <= misr[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+misr[4] <= misr[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+misr[5] <= misr[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+misr[6] <= misr[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+misr[7] <= misr[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
